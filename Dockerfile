@@ -25,8 +25,11 @@ RUN  mkdir packages && \
     apt-get install libxml2-dev --yes && \
     apt-get install libcurl4-gnutls-dev --yes
 
-COPY runLocalInstallPackages.sh /usr/local/bin/runLocal.sh
-COPY runS3OnBatchInstallPackages.sh /usr/local/bin/runS3OnBatch.sh
+COPY runS3Batch_prerun_custom.sh /usr/local/bin/runS3Batch_prerun_custom.sh
+COPY runS3Batch_postrun_custom.sh /usr/local/bin/runS3Batch_postrun_custom.sh
+
+COPY common/container_scripts/runLocal.sh /usr/local/bin/runLocal.sh
+COPY common/container_scripts/runS3OnBatch.sh /usr/local/bin/runS3OnBatch.sh
 COPY Dockerfile /build/Dockerfile
 COPY jobdef.json /build/jobdef.json
 RUN chmod ugo+x /usr/local/bin/runS3OnBatch.sh /usr/local/bin/runLocal.sh
