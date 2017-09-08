@@ -34,7 +34,7 @@ COPY Dockerfile /build/Dockerfile
 COPY jobdef.json /build/jobdef.json
 RUN chmod ugo+x /usr/local/bin/runS3OnBatch.sh /usr/local/bin/runLocal.sh
 
-COPY common/container_scripts/misc/RunR* /build
+COPY common/container_scripts/misc/RunR* /build/
 
 CMD ["/usr/local/bin/runS3OnBatch.sh" ]
 
