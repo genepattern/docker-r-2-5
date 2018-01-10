@@ -1,5 +1,5 @@
 ##
-## Copyright (c) 2017 Broad Institute, Inc., Massachusetts Institute of Technology, and Regents of the University of California.  All rights reserved.
+# copyright 2017-2018 Regents of the University of California and the Broad Institute. All rights reserved.
 ##
 
 local({
